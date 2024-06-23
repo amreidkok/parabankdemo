@@ -1,0 +1,14 @@
+{
+  "firstname": "test123",
+  "lastname": "hello@cypress.io",
+  "Address": "new cairo",
+  "city":"cairo",
+  "state":"state",
+  "zipcode":"23244",
+  "phone":"029282727262",
+  "ssn":"94848484848",
+  "username":"adminstrator1",
+  "password":"adminstrator"
+
+ 
+}
