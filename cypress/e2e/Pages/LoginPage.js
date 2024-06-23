@@ -10,6 +10,7 @@ export class LoginPage
       passwordlctr='input[name=password]'
       submitbtnlctr='input[value="Log In"]'
       RegisterLink='a[href *="register"]'
+      WelcomeTxt='p[class="smallText"] b'
 
 
       //Actions
@@ -27,9 +28,9 @@ ClickOnLoginBtn()
     cy.get(this.submitbtnlctr).click()
 }
 
-ValidateOnWelcomeText(elementLocator,text)
+ValidateOnWelcomeText(text)
 {
-    cy.get(elementLocator).should('contain',text)
+    cy.get(this.WelcomeTxt).should('contain',text)
 }
 
 ClickOnRegisterLink()

@@ -10,6 +10,6 @@ cy.visit('https://parabank.parasoft.com/')
 lgp.InsertUserName('adminamr')
 lgp.InsertPassword('amr')
 lgp.ClickOnLoginBtn()
-lgp.ValidateOnWelcomeText('p[class="smallText"] b','Welcome')
+lgp.ValidateOnWelcomeText('Welcome')
     
   })
