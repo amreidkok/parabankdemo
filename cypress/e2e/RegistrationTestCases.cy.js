@@ -15,7 +15,7 @@ describe('RegistrationTestCases',function()
       this.regdata=regdata
      
     })
-  cy.visit('https://parabank.parasoft.com/')
+  cy.visit(Cypress.env('url'))
   }
   )
     it('RegisterationValidationMessages', function(){

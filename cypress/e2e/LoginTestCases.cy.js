@@ -1,6 +1,10 @@
 import { LoginPage } from "./Pages/LoginPage"
 import { RegistrationPage } from "./Pages/RegistrationPage"
 
+
+const lgp=new LoginPage()
+const rgp=new RegistrationPage()
+
 beforeEach(function()
 {
   cy.fixture('Registrationtestdata').then(function(regdata)
@@ -9,16 +13,15 @@ beforeEach(function()
     this.regdata=regdata
    
   })
-
+  cy.visit(Cypress.env('url'))
 }
 )
 
 
   it('ValidLoginTestCase', function(){
  
-const lgp=new LoginPage()
-const rgp=new RegistrationPage()
-cy.visit('https://parabank.parasoft.com/')
+
+
 lgp.InsertUserName(this.regdata.username)
 lgp.InsertPassword(this.regdata.password)
 lgp.ClickOnLoginBtn()
