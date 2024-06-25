@@ -23,6 +23,7 @@ export class RegistrationPage
    usernametxt='input[id="customer.username"]'
    passwordtxt='input[id="customer.password"]'
    confirmpasswordtxt='input[id="repeatedPassword"]'
+   registersuccessfullytxt='div[id="rightPanel"] p'
 
 //Actions
 ClickOnRegisterBtn()
@@ -110,5 +111,9 @@ Insertpassword(passtxt)
 ConfirmPassword(confirmtxt)
 {
     cy.get(this.confirmpasswordtxt).type(confirmtxt)
+}
+ValidateOnregistersuccsText(text)
+{
+    cy.get(this.registersuccessfullytxt).should('contain',text)
 }
 }

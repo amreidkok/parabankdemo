@@ -20,8 +20,6 @@ beforeEach(function()
 
   it('ValidLoginTestCase', function(){
  
-
-
 lgp.InsertUserName(this.regdata.username)
 lgp.InsertPassword(this.regdata.password)
 lgp.ClickOnLoginBtn()

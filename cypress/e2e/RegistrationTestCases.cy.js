@@ -51,6 +51,7 @@ describe('RegistrationTestCases',function()
       rgp.Insertpassword(this.regdata.password)
       rgp.ConfirmPassword(this.regdata.password)
       rgp.ClickOnRegisterBtn()
+      rgp.ValidateOnregistersuccsText('Your account was')
           
         })
 
