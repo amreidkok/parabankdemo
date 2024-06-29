@@ -12,13 +12,20 @@ describe('RegistrationTestCases',function()
   beforeEach(function()
   {
     cy.fixture('Registrationtestdata').then(function(regdata){
-      this.regdata=regdata
+      const originalAdminUser = regdata.username;
+      // Generate a new incremented user value (you can use any logic here)
+      const incrementedAdminUser = `${originalAdminUser}${new Date().getTime()}`; // Example: admin1624605053492
+      
+      // Update the fixture data with the new user value
+      regdata.username = incrementedAdminUser;
+      
+          this.regdata=regdata
      
     })
   cy.visit(Cypress.env('url'))
   }
   )
-    it('RegisterationValidationMessages', function(){
+    it('ValidateOnRegisterationValidationMessages', function(){
    
   
   lgp.ClickOnRegisterLink()
@@ -34,9 +41,8 @@ describe('RegistrationTestCases',function()
     })
 
 
-    it('ValidRegisteration', function(){
+    it('ValidateOnValidRegisterationThenLogin', function(){
    
-  
       lgp.ClickOnRegisterLink()
       rgp.ClickOnRegisterBtn()
       rgp.InsertFirstName(this.regdata.firstname)
@@ -52,6 +58,11 @@ describe('RegistrationTestCases',function()
       rgp.ConfirmPassword(this.regdata.password)
       rgp.ClickOnRegisterBtn()
       rgp.ValidateOnregistersuccsText('Your account was')
+      rgp.ClickOnLogOutLink()
+      lgp.InsertUserName(this.regdata.username)
+      lgp.InsertPassword(this.regdata.password)
+      lgp.ClickOnLoginBtn()
+      lgp.ValidateOnWelcomeText('Welcome')
           
         })
 

@@ -24,6 +24,7 @@ export class RegistrationPage
    passwordtxt='input[id="customer.password"]'
    confirmpasswordtxt='input[id="repeatedPassword"]'
    registersuccessfullytxt='div[id="rightPanel"] p'
+   LogoutLink='a[href *="logout"]'
 
 //Actions
 ClickOnRegisterBtn()
@@ -115,5 +116,10 @@ ConfirmPassword(confirmtxt)
 ValidateOnregistersuccsText(text)
 {
     cy.get(this.registersuccessfullytxt).should('contain',text)
+}
+
+ClickOnLogOutLink()
+{
+    cy.get(this.LogoutLink).click()
 }
 }

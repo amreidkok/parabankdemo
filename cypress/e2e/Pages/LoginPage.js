@@ -11,6 +11,8 @@ export class LoginPage
       submitbtnlctr='input[value="Log In"]'
       RegisterLink='a[href *="register"]'
       WelcomeTxt='p[class="smallText"] b'
+      LoginInvalidMessage='(//p[@class="error"])[1]'
+
 
 
       //Actions
@@ -21,6 +23,7 @@ InsertUserName(username)
 InsertPassword(password)
 {
     cy.get(this.passwordlctr).type(password)
+    
 }
 
 ClickOnLoginBtn()
@@ -37,6 +40,10 @@ ClickOnRegisterLink()
 {
     cy.get(this.RegisterLink).click()
     //return new RegistrationPage()
+}
+ValidateOnInvalidLoginMessage(text)
+{
+    cy.xpath(this.LoginInvalidMessage).should('contain',text)
 }
 
 
