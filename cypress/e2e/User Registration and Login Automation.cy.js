@@ -66,6 +66,15 @@ describe('RegistrationTestCases',function()
           
         })
 
+        it('ValidateonInValidLoginTestCase', function(){
+ 
+          lgp.InsertUserName(this.regdata.username)
+          lgp.InsertPassword(this.regdata.password)
+          lgp.ClickOnLoginBtn()
+          lgp.ValidateOnInvalidLoginMessage('The username and password could not be verified.')
+              
+            })
+
 }
 
 ) 
