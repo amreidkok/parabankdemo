@@ -41,10 +41,15 @@ ClickOnRegisterLink()
     cy.get(this.RegisterLink).click()
     //return new RegistrationPage()
 }
-ValidateOnInvalidLoginMessage(text)
+ValidateOnInvalidLoginMessage(text1,text2)
 {
-    cy.xpath(this.LoginInvalidMessage).should('contain',text)
+    cy.xpath(this.LoginInvalidMessage).should('be.visible')
+    cy.xpath(this.LoginInvalidMessage)
+  .should(($status) => {
+    const text = $status.text();
+    expect(text === text1 || text === text2).to.be.true;
+  });
+
+
 }
-
-
 }

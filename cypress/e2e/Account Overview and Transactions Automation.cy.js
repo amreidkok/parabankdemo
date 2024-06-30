@@ -1,10 +1,12 @@
 import { LoginPage } from "./Pages/LoginPage"
+import { NewAccountPage } from "./Pages/NewAccountPage"
 import { RegistrationPage } from "./Pages/RegistrationPage"
 
 const lgp=new LoginPage()
 const rgp=new RegistrationPage()
+const NAp= new NewAccountPage()
 
-describe('UserRegistration and login TestCases',function()
+describe('Account Overview and transactions Test Cases',function()
 
 
 {
@@ -25,23 +27,10 @@ describe('UserRegistration and login TestCases',function()
   cy.visit(Cypress.env('url'))
   }
   )
-    it('', function(){
-   
-  
-  lgp.ClickOnRegisterLink()
-  rgp.ClickOnRegisterBtn()
-  rgp.validateOnFirstnameValidation("First name is required.")
-  rgp.validateOnLastnameValidation("Last name is required.")
-  rgp.validateOnAddressValidation("Address is required.")
-  rgp.validateOncityValidation("City is required.")
-  rgp.validateOnstateValidation("State is required.")
-  rgp.validateOnzipcodeValidation("Zip Code is required.")
-  rgp.validateOnssnValidation("Social Security Number is required.")
-      
-    })
+    
 
 
-    it('ValidateOnValidRegisterationThenLogin', function(){
+    it('ValidateOnCreatingNewAccountandViewBalance', function(){
    
       lgp.ClickOnRegisterLink()
       rgp.ClickOnRegisterBtn()
@@ -63,18 +52,12 @@ describe('UserRegistration and login TestCases',function()
       lgp.InsertPassword(this.regdata.password)
       lgp.ClickOnLoginBtn()
       lgp.ValidateOnWelcomeText('Welcome')
-          
+      NAp.ClickOnOpenandCreateNewAccount(0)
+      NAp.ValidateOnAccountCreation('Congratulations, your account is now open.')
+    
         })
 
-        it('ValidateonInValidLoginTestCase', function()
-        {
- 
-          lgp.InsertUserName(this.regdata.invalidusername)
-          lgp.InsertPassword(this.regdata.invalidpassword)
-          lgp.ClickOnLoginBtn()
-          lgp.ValidateOnInvalidLoginMessage('The username and password could not be verified.','An internal error has occurred and has been logged.')
-              
-            })
+      
 
 }
 

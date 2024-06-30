@@ -8,7 +8,9 @@
   "phone":"029282727262",
   "ssn":"94848484848",
   "username":"admin",
-  "password":"admin"
+  "password":"admin",
+  "invalidusername" :"test123",
+  "invalidpassword" : "test123"
 
  
 }
