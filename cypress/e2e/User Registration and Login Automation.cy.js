@@ -25,7 +25,7 @@ describe('UserRegistration and login TestCases',function()
   cy.visit(Cypress.env('url'))
   }
   )
-    it('', function(){
+    it('Validate on Registeration Validations', function(){
    
   
   lgp.ClickOnRegisterLink()
@@ -41,7 +41,7 @@ describe('UserRegistration and login TestCases',function()
     })
 
 
-    it('ValidateOnValidRegisterationThenLogin', function(){
+    it('Validate On Valid Registeration Then Login', function(){
    
       lgp.ClickOnRegisterLink()
       rgp.ClickOnRegisterBtn()
@@ -66,7 +66,7 @@ describe('UserRegistration and login TestCases',function()
           
         })
 
-        it('ValidateonInValidLoginTestCase', function()
+        it('Validate on InValid Login', function()
         {
  
           lgp.InsertUserName(this.regdata.invalidusername)

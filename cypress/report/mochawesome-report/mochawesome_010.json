@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-07-05T20:43:09.990Z",
+    "end": "2024-07-05T20:43:53.189Z",
+    "duration": 43199,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "9fe90296-ebb3-4540-8e5e-1eb3ba1b1514",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Account Overview and Transactions Automation.cy.js",
+      "file": "cypress\\e2e\\Account Overview and Transactions Automation.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "823c1407-055c-43eb-a48c-ffb17eeaa445",
+          "title": "Account Overview and transactions Test Cases",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "ValidateOnCreatingNewAccountandViewBalance",
+              "fullTitle": "Account Overview and transactions Test Cases ValidateOnCreatingNewAccountandViewBalance",
+              "timedOut": null,
+              "duration": 31194,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "lgp.ClickOnRegisterLink();\nrgp.ClickOnRegisterBtn();\nrgp.InsertFirstName(this.regdata.firstname);\nrgp.InsertLastName(this.regdata.lastname);\nrgp.InsertAddress(this.regdata.Address);\nrgp.Insertcity(this.regdata.city);\nrgp.Insertstate(this.regdata.state);\nrgp.Insertzipcode(this.regdata.zipcode);\nrgp.Insertphone(this.regdata.phone);\nrgp.Insertssn(this.regdata.ssn);\nrgp.Insertusername(this.regdata.username);\nrgp.Insertpassword(this.regdata.password);\nrgp.ConfirmPassword(this.regdata.password);\nrgp.ClickOnRegisterBtn();\nrgp.ValidateOnregistersuccsText('Your account was');\nrgp.ClickOnLogOutLink();\nlgp.InsertUserName(this.regdata.username);\nlgp.InsertPassword(this.regdata.password);\nlgp.ClickOnLoginBtn();\nlgp.ValidateOnWelcomeText('Welcome');\nNAp.ClickOnOpenandCreateNewAccount(0);\nNAp.ValidateOnAccountCreation('Congratulations, your account is now open.');",
+              "err": {},
+              "uuid": "487f9847-0dd6-4f91-8b9d-5c2351a75826",
+              "parentUUID": "823c1407-055c-43eb-a48c-ffb17eeaa445",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "487f9847-0dd6-4f91-8b9d-5c2351a75826"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 31194,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": "true",
+        "overwrite": "false",
+        "html": false,
+        "JSON": true,
+        "reportDir": "cypress/report/mochawesome-report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

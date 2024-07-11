@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
-module.exports = defineConfig({
+module.exports = defineConfig(
+  {
   projectId: "fvbpxy",
 
   env: {
@@ -12,4 +13,14 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  
+    reporter: 'mochawesome',
+    reporterOptions: {
+      charts: 'true',
+      overwrite:'false',
+      html : false,
+      JSON : true,
+      reportDir:'cypress/report/mochawesome-report'
+    }
+  
 });
