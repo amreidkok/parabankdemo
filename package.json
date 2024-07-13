@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "pre-test1": "rimraf  './cypress/report/mochawesome-report/*.json'",
+    "pre-test1": "rimraf  ./cypress/report/mochawesome-report/*.json",
     "pre-test2": "rimraf ./cypress/report/report1.html",
     "pre-test3": "rimraf ./cypress/report/report1.json",
     "test": "echo \"Error: no test specified\" && exit 1",
