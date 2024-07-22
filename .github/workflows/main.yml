@@ -1,0 +1,21 @@
+name: cypress_github_actions
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: windows-latest  # Use the latest version of Windows as the runner
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+   
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm run run-tests
